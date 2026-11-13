@@ -17,6 +17,7 @@ Automated E2E test suite for the NmbrsAccounting Web Application, built with C#,
 - [Test Coverage](#test-coverage)
 - [Configuration](#configuration)
 - [Reporting](#reporting)
+- [Future Enhancements](#future-enhancements)
 - [Troubleshooting](#troubleshooting)
 
 ---
@@ -210,6 +211,19 @@ After each CI/CD run, the following artifacts are available for download from th
 - **Failure Screenshots** - Screenshots captured on test failures (only uploaded when tests fail)
 
 Navigate to the [Actions tab](https://github.com/MohammedRasool/nmbrsAccountingAssignment/actions) to view workflow runs and download artifacts.
+
+---
+
+## Future Enhancements
+
+With additional time, the following improvements could be implemented:
+
+- **Visual Regression:** Implement screenshot comparison tests using Playwright's built-in capabilities
+- **Performance Monitoring:** Add page load time assertions and resource usage metrics
+- **Cross-Browser Testing:** Configure Firefox and WebKit for broader browser coverage
+- **Test Data Management:** Externalize test data to JSON/YAML files for better maintainability
+- **Code Coverage:** Add test coverage reporting and quality gates
+- **Parallel Execution Optimization:** Fine-tune parallel test execution for faster CI/CD pipelines
 
 ---
 
