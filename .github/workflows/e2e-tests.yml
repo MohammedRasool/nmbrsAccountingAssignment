@@ -50,6 +50,13 @@ jobs:
         name: test-results
         path: nmbrsaccounting_testsuite/NmbrsAccounting.Tests/TestResults/
 
+    - name: Upload HTML Report
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: html-report
+        path: nmbrsaccounting_testsuite/NmbrsAccounting.Tests/bin/Debug/net10.0/ReqnrollExecutionReport.html
+
     - name: Upload Failure Screenshots
       if: failure()
       uses: actions/upload-artifact@v4
