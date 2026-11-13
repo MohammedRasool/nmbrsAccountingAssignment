@@ -97,16 +97,19 @@ nmbrsaccounting-qa-assessment/
 │   └── NmbrsAccounting.Tests/
 │       ├── Features/
 │       │   ├── Navigation.feature  # Menu navigation scenarios
-│       │   └── Invoices.feature    # Invoice verification scenarios
+│       │   ├── Invoices.feature    # Invoice verification scenarios
+│       │   └── Privacy.feature     # Privacy page content verification
 │       ├── Hooks/
 │       │   └── PlaywrightHooks.cs  # Before/After scenario lifecycle
 │       ├── Pages/
 │       │   ├── BasePage.cs         # Shared navigation logic
 │       │   ├── HomePage.cs         # Home page object
-│       │   └── InvoicesPage.cs     # Invoices page object
+│       │   ├── InvoicesPage.cs     # Invoices page object
+│       │   └── PrivacyPage.cs      # Privacy page object
 │       ├── StepDefinitions/
 │       │   ├── NavigationSteps.cs  # Navigation step bindings
-│       │   └── InvoiceSteps.cs     # Invoice step bindings
+│       │   ├── InvoiceSteps.cs     # Invoice step bindings
+│       │   └── PrivacySteps.cs     # Privacy step bindings
 │       ├── Support/
 │       │   ├── PlaywrightDriver.cs # Browser lifecycle management
 │       │   └── Money.cs            # Currency parsing utility
@@ -167,6 +170,7 @@ Locators use CSS classes and ARIA roles (e.g., `.summary-row`, `main[role='main'
 | **Navigation** | Every page in the menu opens successfully | Dynamically reads menu links, clicks them, asserts HTTP 200 + visible main content |
 | **Invoices** | Summary row contains correct total | Sums all invoice amounts and asserts it matches the UI's summary row |
 | **Invoices** | Invoice I634 shows expected amount | Extracts amount for invoice `I634` and asserts it equals `423.99 EUR` |
+| **Privacy** | Privacy page displays correct content | Verifies page title is "Privacy Policy" and content mentions privacy |
 
 ---
 

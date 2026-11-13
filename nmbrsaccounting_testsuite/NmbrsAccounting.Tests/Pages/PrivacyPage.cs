@@ -1,0 +1,33 @@
+using NmbrsAccounting.Tests.Support;
+
+namespace NmbrsAccounting.Tests.Pages;
+
+/// <summary>
+/// Page object for the Privacy page. Inherits navigation logic from BasePage.
+/// Demonstrates code reuse through inheritance - reuses OpenMenuPageAsync() and other
+/// shared navigation methods from BasePage without duplicating code.
+/// </summary>
+public sealed class PrivacyPage : BasePage
+{
+    // CSS selectors matching the Privacy page markup in Privacy.cshtml
+    private const string PageTitleSelector = "h1";  // The main heading
+    private const string ContentSelector = "p";     // The paragraph content
+
+    // Constructor receives PlaywrightDriver via Reqnroll's dependency injection
+    public PrivacyPage(PlaywrightDriver driver) : base(driver) { }
+
+    /// <summary>Navigates to the Privacy page by clicking the menu link.</summary>
+    public Task OpenAsync() => OpenMenuPageAsync("Privacy");
+
+    /// <summary>
+    /// Extracts the page title from the h1 element.
+    /// </summary>
+    public async Task<string> GetPageTitleAsync()
+        => (await Page.Locator(PageTitleSelector).InnerTextAsync()).Trim();
+
+    /// <summary>
+    /// Extracts the main content text from the paragraph element.
+    /// </summary>
+    public async Task<string> GetContentAsync()
+        => (await Page.Locator(ContentSelector).InnerTextAsync()).Trim();
+}
