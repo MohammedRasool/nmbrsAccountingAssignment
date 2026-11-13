@@ -28,7 +28,7 @@ jobs:
     - name: Install Playwright Browsers
       run: |
         cd nmbrsaccounting_testsuite/NmbrsAccounting.Tests
-        pwsh bin/Debug/net10.0/playwright.ps1 install --with-deps
+        pwsh bin/Debug/net10.0/playwright.ps1 install chromium --with-deps
 
     - name: Start Web Application
       run: |
