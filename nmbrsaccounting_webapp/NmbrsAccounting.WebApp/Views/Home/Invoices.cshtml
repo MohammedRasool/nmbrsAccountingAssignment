@@ -1,0 +1,37 @@
+﻿@{
+    ViewData["Title"] = "Invoices";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Below, you'll find a list of invoices. Calculate the total amount.</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>Invoice Number</th>
+            <th>Client</th>
+            <th>Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>I523</td>
+            <td>Microsoft</td>
+            <td class="number-cell">499.99 EUR</td>
+        </tr>
+        <tr>
+            <td>I634</td>
+            <td>Amazon</td>
+            <td class="number-cell">423.99 EUR</td>
+        </tr>
+        <tr>
+            <td>I125</td>
+            <td>Slack</td>
+            <td class="number-cell">39.99 EUR</td>
+        </tr>
+        <tr class="summary-row">
+            <td colspan="2">Sum of invoices</td>
+            <td class="number-cell">963.97 EUR</td>
+        </tr>
+    </tbody>
+</table>
