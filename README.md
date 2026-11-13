@@ -172,6 +172,20 @@ Environment variables for adapting to different environments:
 
 Currently runs on **Chromium only**. To add Firefox or WebKit, modify the `LaunchAsync` call in `PlaywrightDriver.cs`.
 
+### Running in Headed Mode
+
+To see the browser window during test execution:
+
+```bash
+# macOS/Linux
+HEADED=true dotnet test
+
+# Windows (PowerShell)
+$env:HEADED="true"; dotnet test
+```
+
+This is useful for debugging or demonstrating the test suite.
+
 ---
 
 ## Reporting
