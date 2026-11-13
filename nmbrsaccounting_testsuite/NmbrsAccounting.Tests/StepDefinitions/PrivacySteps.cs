@@ -41,18 +41,18 @@ public sealed class PrivacySteps
     }
 
     /// <summary>
-    /// Then the page should contain privacy policy content
+    /// Then the page content should be "{expectedContent}"
     /// 
-    /// Extracts the paragraph text and verifies it contains the expected content:
-    /// "Use this page to detail your site's privacy policy."
-    /// This ensures the Privacy page has not been accidentally modified or broken.
+    /// Extracts the paragraph text and verifies it matches the expected content
+    /// passed from the feature file. This ensures the Privacy page has not been
+    /// accidentally modified or broken.
     /// </summary>
-    [Then("the page should contain privacy policy content")]
-    public async Task ThenThePageShouldContainPrivacyPolicyContentAsync()
+    [Then("the page content should be \"(.*)\"")]
+    public async Task ThenThePageContentShouldBeAsync(string expectedContent)
     {
         _pageContent = await _privacy.GetContentAsync();
         Assert.That(_pageContent, Is.Not.Empty, "Privacy page should have content");
-        Assert.That(_pageContent, Is.EqualTo("Use this page to detail your site's privacy policy."),
+        Assert.That(_pageContent, Is.EqualTo(expectedContent),
             $"Expected exact content but got '{_pageContent}'");
     }
 }
