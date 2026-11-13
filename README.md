@@ -182,6 +182,15 @@ Currently runs on **Chromium only**. To add Firefox or WebKit, modify the `Launc
 | **TRX Format** | Machine-readable results via `--logger trx` (consumed by Azure DevOps / GitHub Actions) |
 | **Failure Screenshots** | Full-page screenshots saved to `artifacts/` on scenario failure |
 
+### GitHub Actions Artifacts
+
+After each CI/CD run, the following artifacts are available for download from the GitHub Actions workflow run:
+- **HTML Report** - Full Reqnroll execution report
+- **TRX Results** - Machine-readable test results
+- **Failure Screenshots** - Screenshots captured on test failures (only uploaded when tests fail)
+
+Navigate to the [Actions tab](https://github.com/MohammedRasool/nmbrsAccountingAssignment/actions) to view workflow runs and download artifacts.
+
 ---
 
 ## Troubleshooting
