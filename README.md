@@ -179,10 +179,6 @@ Environment variables for adapting to different environments:
 | `BASE_URL` | `https://localhost:5001` | Target URL of the web application |
 | `HEADED` | `false` | Set to `true` for visible browser window (debugging) |
 
-### Browser Support
-
-Currently runs on **Chromium only**. To add Firefox or WebKit, modify the `LaunchAsync` call in `PlaywrightDriver.cs`.
-
 ### Running in Headed Mode
 
 To see the browser window during test execution:
