@@ -1,0 +1,35 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.userprefs
+
+# Reqnroll auto-generated code-behind files
+*.feature.cs
+
+# Build output
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+# .NET
+*.dll
+*.exe
+*.pdb
+project.lock.json
+*.nupkg
+
+# Test artifacts and reports
+TestResults/
+artifacts/
+*.trx
+ReqnrollExecutionReport.html
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
