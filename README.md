@@ -10,6 +10,7 @@ Automated E2E test suite for the NmbrsAccounting Web Application, built with C#,
 ## Table of Contents
 
 - [Technologies Used](#technologies-used)
+- [Test Environment](#test-environment)
 - [Clone & Setup](#clone--setup)
 - [Project Structure](#project-structure)
 - [Architecture & Design Patterns](#architecture--design-patterns)
@@ -29,6 +30,15 @@ Automated E2E test suite for the NmbrsAccounting Web Application, built with C#,
 | Reqnroll | BDD framework (Gherkin syntax) |
 | NUnit | Test runner and assertions |
 | GitHub Actions | CI/CD pipeline |
+
+## Test Environment
+
+This test suite was developed and tested under the following conditions:
+
+- **Operating System:** macOS (not tested on Windows)
+- **Browser:** Chromium only (Firefox and WebKit not configured)
+- **Web Application:** Runs without errors or warnings
+- **Test Execution:** All tests pass successfully in both headless and headed modes
 
 ---
 
@@ -177,11 +187,7 @@ Currently runs on **Chromium only**. To add Firefox or WebKit, modify the `Launc
 To see the browser window during test execution:
 
 ```bash
-# macOS/Linux
 HEADED=true dotnet test
-
-# Windows (PowerShell)
-$env:HEADED="true"; dotnet test
 ```
 
 This is useful for debugging or demonstrating the test suite.
