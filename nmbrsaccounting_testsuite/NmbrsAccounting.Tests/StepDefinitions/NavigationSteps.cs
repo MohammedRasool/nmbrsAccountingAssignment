@@ -9,7 +9,7 @@ namespace NmbrsAccounting.Tests.StepDefinitions;
 /// Binds Gherkin steps to code that interacts with the HomePage object.
 /// 
 /// FLOW:
-///   Given I am on the home page          → Navigate to base URL
+///   Given I am on the "Home" page        → Navigate to Home page via menu
 ///   When I visit every page in the menu  → Loop through menu links, click each one
 ///   Then every visited page loads        → Assert no pages returned errors
 /// </summary>
@@ -23,11 +23,7 @@ public sealed class NavigationSteps
     // Constructor receives HomePage via Reqnroll's dependency injection
     public NavigationSteps(HomePage home) => _home = home;
 
-    /// <summary>Given I am on the home page</summary>
-    [Given("I am on the home page")]
-    public Task GivenIAmOnTheHomePageAsync() => _home.OpenAsync();
-
-    /// <summary>Given I am on the "{page}" page (e.g., "Invoices", "Privacy")</summary>
+    /// <summary>Given I am on the "{page}" page (e.g., "Home", "Invoices", "Privacy")</summary>
     [Given(@"I am on the ""(.*)"" page")]
     public Task GivenIAmOnThePageAsync(string label) => _home.OpenMenuPageAsync(label);
 

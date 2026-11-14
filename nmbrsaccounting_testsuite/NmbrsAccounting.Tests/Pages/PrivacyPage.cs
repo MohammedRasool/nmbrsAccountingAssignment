@@ -16,9 +16,6 @@ public sealed class PrivacyPage : BasePage
     // Constructor receives PlaywrightDriver via Reqnroll's dependency injection
     public PrivacyPage(PlaywrightDriver driver) : base(driver) { }
 
-    /// <summary>Navigates to the Privacy page by clicking the menu link.</summary>
-    public Task OpenAsync() => OpenMenuPageAsync("Privacy");
-
     /// <summary>
     /// Extracts the page title from the h1 element.
     /// </summary>

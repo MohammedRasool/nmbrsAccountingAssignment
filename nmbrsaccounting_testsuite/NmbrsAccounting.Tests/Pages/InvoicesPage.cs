@@ -37,9 +37,6 @@ public sealed class InvoicesPage : BasePage
     // Constructor receives PlaywrightDriver via Reqnroll's dependency injection
     public InvoicesPage(PlaywrightDriver driver) : base(driver) { }
 
-    /// <summary>Navigates to the Invoices page by clicking the menu link.</summary>
-    public Task OpenAsync() => OpenMenuPageAsync("Invoices");
-
     /// <summary>
     /// Extracts all invoice rows from the table.
     /// 
