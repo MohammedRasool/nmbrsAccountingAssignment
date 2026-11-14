@@ -168,9 +168,11 @@ Locators use CSS classes and ARIA roles (e.g., `.summary-row`, `main[role='main'
 | Feature | Scenario | Validation Logic |
 | :--- | :--- | :--- |
 | **Navigation** | Every page in the menu opens successfully | Dynamically reads menu links, clicks them, asserts HTTP 200 + visible main content |
+| **Navigation** | Home page has correct title | Verifies page title is "Welcome" |
+| **Invoices** | Invoices page has correct title | Verifies page title is "Invoices" |
 | **Invoices** | Summary row contains correct total | Sums all invoice amounts and asserts it matches the UI's summary row |
 | **Invoices** | Invoice I634 shows expected amount | Extracts amount for invoice `I634` and asserts it equals `423.99 EUR` |
-| **Privacy** | Privacy page displays correct content | Verifies page title is "Privacy Policy" and content mentions privacy |
+| **Privacy** | Privacy page has correct title | Verifies page title is "Privacy Policy" |
 
 ---
 

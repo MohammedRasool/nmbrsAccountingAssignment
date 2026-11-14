@@ -6,18 +6,13 @@ namespace NmbrsAccounting.Tests.Pages;
 /// Page object for the Privacy page. Inherits navigation logic from BasePage.
 /// Demonstrates code reuse through inheritance - reuses OpenMenuPageAsync() and other
 /// shared navigation methods from BasePage without duplicating code.
+/// 
+/// Currently no page-specific methods needed - all functionality inherited from BasePage.
+/// This class maintains consistency with the Page Object Model pattern and provides
+/// a foundation for future Privacy-specific tests if needed.
 /// </summary>
 public sealed class PrivacyPage : BasePage
 {
-    // CSS selectors matching the Privacy page markup in Privacy.cshtml
-    private const string ContentSelector = "p";     // The paragraph content
-
     // Constructor receives PlaywrightDriver via Reqnroll's dependency injection
     public PrivacyPage(PlaywrightDriver driver) : base(driver) { }
-
-    /// <summary>
-    /// Extracts the main content text from the paragraph element.
-    /// </summary>
-    public async Task<string> GetContentAsync()
-        => (await Page.Locator(ContentSelector).InnerTextAsync()).Trim();
 }

@@ -9,11 +9,15 @@ namespace NmbrsAccounting.Tests.StepDefinitions;
 /// Step definitions for the Invoices.feature file.
 /// Binds Gherkin steps to code that interacts with the InvoicesPage object.
 /// 
-/// SCENARIO 1: Verify summary row total
+/// SCENARIO 1: Verify page title
+///   Given I am on the "Invoices" page    → Navigate to Invoices page
+///   Then the page title should be        → Verify h1 contains "Invoices"
+/// 
+/// SCENARIO 2: Verify summary row total
 ///   When I read all invoice amounts   → Extract all rows from the table
 ///   Then the summary equals the sum   → Sum the amounts, compare to summary row
 /// 
-/// SCENARIO 2: Verify specific invoice amount
+/// SCENARIO 3: Verify specific invoice amount
 ///   When I read the amount of "I634"  → Find the row, extract the amount
 ///   Then the amount equals "423.99"   → Compare to expected value
 /// </summary>

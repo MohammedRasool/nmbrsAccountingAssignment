@@ -6,7 +6,9 @@ namespace NmbrsAccounting.Tests.StepDefinitions;
 /// <summary>
 /// Step definitions for the Privacy.feature file.
 /// Currently uses steps from NavigationSteps for navigation and title verification.
-/// This class is reserved for future Privacy-specific steps if needed.
+/// 
+/// This class is reserved for future Privacy-specific steps if needed, maintaining
+/// consistency with the BDD pattern where each feature has its own step definition class.
 /// </summary>
 [Binding]
 public sealed class PrivacySteps

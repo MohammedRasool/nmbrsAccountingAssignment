@@ -3,6 +3,6 @@ Feature: Privacy page
 	I want to view the privacy policy
 	So that I understand how my data is handled
 
-	Scenario: Privacy page displays correct content
+	Scenario: Privacy page has correct title
 		Given I am on the "Privacy" page
 		Then the page title should be "Privacy Policy"
