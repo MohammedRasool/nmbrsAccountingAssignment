@@ -3,6 +3,10 @@ Feature: Invoice overview
 	I want the invoice overview to be correct
 	So that I can trust the totals
 
+	Scenario: Invoices page has correct title
+		Given I am on the "Invoices" page
+		Then the page title should be "Invoices"
+
 	Scenario: The summary row contains the correct total of all invoices
 		Given I am on the "Invoices" page
 		When I read all invoice amounts from the overview

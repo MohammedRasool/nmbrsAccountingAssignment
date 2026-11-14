@@ -10,17 +10,10 @@ namespace NmbrsAccounting.Tests.Pages;
 public sealed class PrivacyPage : BasePage
 {
     // CSS selectors matching the Privacy page markup in Privacy.cshtml
-    private const string PageTitleSelector = "h1";  // The main heading
     private const string ContentSelector = "p";     // The paragraph content
 
     // Constructor receives PlaywrightDriver via Reqnroll's dependency injection
     public PrivacyPage(PlaywrightDriver driver) : base(driver) { }
-
-    /// <summary>
-    /// Extracts the page title from the h1 element.
-    /// </summary>
-    public async Task<string> GetPageTitleAsync()
-        => (await Page.Locator(PageTitleSelector).InnerTextAsync()).Trim();
 
     /// <summary>
     /// Extracts the main content text from the paragraph element.

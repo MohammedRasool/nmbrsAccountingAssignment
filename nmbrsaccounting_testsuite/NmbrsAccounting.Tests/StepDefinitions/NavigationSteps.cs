@@ -28,6 +28,20 @@ public sealed class NavigationSteps
     public Task GivenIAmOnThePageAsync(string label) => _home.OpenMenuPageAsync(label);
 
     /// <summary>
+    /// Then the page title should be "{expectedTitle}"
+    /// 
+    /// Extracts the h1 element text from the current page and verifies it matches
+    /// the expected title. This ensures each page displays the correct heading.
+    /// </summary>
+    [Then(@"the page title should be ""(.*)""")]
+    public async Task ThenThePageTitleShouldBeAsync(string expectedTitle)
+    {
+        var actualTitle = await _home.GetPageTitleAsync();
+        Assert.That(actualTitle, Is.EqualTo(expectedTitle),
+            $"Expected page title '{expectedTitle}' but got '{actualTitle}'");
+    }
+
+    /// <summary>
     /// When I visit every page listed in the menu
     /// 
     /// Dynamically reads menu labels from the DOM, clicks each link,

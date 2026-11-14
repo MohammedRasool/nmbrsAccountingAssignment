@@ -81,6 +81,13 @@ public abstract class BasePage
     }
 
     /// <summary>
+    /// Extracts the page title from the h1 element.
+    /// Used to verify each page displays the correct heading.
+    /// </summary>
+    public async Task<string> GetPageTitleAsync()
+        => (await Page.Locator("h1").InnerTextAsync()).Trim();
+
+    /// <summary>
     /// Ensures the app is loaded before interacting with the menu.
     /// 
     /// WHY: Each scenario starts on about:blank. This method navigates to the
